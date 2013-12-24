@@ -1,0 +1,27 @@
+$newline never
+\<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>#{pageTitle pc}
+    <meta name="description" content="Mercados Campesinos">
+    <meta name="author" content="Mercados Campesinos">
+    <meta name="keywords" content="cultivos urbanos, soberania alimentaria, agroecologia, economias solidarias">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+
+    <link href=@{StaticR css_bootstrap_css} type="text/css" rel="stylesheet">
+    <link href=@{StaticR css_main_css} type="text/css" rel="stylesheet">
+
+    ^{pageHead pc}
+
+  <body>
+    <div #main>
+      ^{pageBody pc}
+
+    <div .container>
+      <hr>
+      <footer>
+        <a href="#">Acerca del portal
+        <a href="#">Contactenos
+        <a href="#">Clona el proyecto

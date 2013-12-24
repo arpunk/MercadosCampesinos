@@ -1,0 +1,45 @@
+name:           MercadosCampesinos
+version:        0.0.0.1
+description:    Registro y busqueda de mercados campesinos
+cabal-version:  >= 1.18
+build-type:     Simple
+license:        GPL-3
+license-file:   LICENSE
+author:         Ricardo Lanziano <arpunk@cryptolab.net>
+maintainer:     Ricardo Lanziano <arpunk@cryptolab.net>
+category:       Web
+stability:      Experimental
+homepage:       http://hub.darcs.net/arpunk/MercadosCampesinos
+
+executable MercadosCampesinos
+    default-language: Haskell2010
+    main-is:          Main.hs
+    hs-source-dirs:   src
+    build-depends:    base > 4
+                    , bytestring
+                    , yesod
+                    , yesod-core
+                    , yesod-auth
+                    , yesod-static
+                    , yesod-form
+                    , text
+                    , time
+                    , hamlet
+                    , shakespeare-css
+                    , shakespeare-js
+                    , template-haskell
+                    , http-conduit
+                    , warp
+                    , aeson
+                    , conduit
+                    , monad-control
+                    , wai-extra
+                    , aeson
+                    , persistent
+                    , persistent-postgresql
+                    , persistent-template
+                    , transformers
+                    , monad-logger
+                    , resourcet
+
+    ghc-options:      -threaded -O2

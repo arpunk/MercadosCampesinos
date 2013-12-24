@@ -1,0 +1,13 @@
+<header>
+  ^{navbarWidget}
+
+<div .container>
+  <div .row>
+    <div col-md-12>
+      <div .page-header>
+        <h1>Ultimos mercados
+
+      <ul>
+        $forall Entity mId m <- markets
+          <li>
+            <a href=@{MarketR mId}>#{marketTitle m}

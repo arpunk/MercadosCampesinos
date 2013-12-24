@@ -1,0 +1,39 @@
+<header>
+  ^{navbarWidget}
+
+<div .container>
+  <div .row>
+    <div .col-md-6>
+      <div .page-header>
+        <h1>#{marketTitle market}
+
+      <p>#{toHtml $ show $ marketDate market}
+      <p>Credibilidad: #{marketCredibility market}
+      $case marketVerified market
+        $of True
+          <p>Verificado!
+        $of False
+          <p>No verificado!
+
+      <p>Tipo de mercado: #{toHtml $ marketTypeLabel $ marketWhatType market}
+
+      <p>Descripcion: #{marketDescription market}
+      <p>Lugar: #{marketAddress market}
+
+      <div #wishlists>
+        <div .page-header>
+          <h3>Lo que le gustaría ver a la gente
+
+        <ul>
+          $forall Entity _ w <- wishlists
+            <li>#{wishlistWhat w}
+
+        <form .form method=post action=@{NewWishlistR mid} enctype=#{wlEncType}>
+          ^{newWishlistWidget}
+          <div>
+            <input type="submit" value="Cuentanos!" .btn .btn-success .btn-lg>
+
+    <div .col-md-6>
+      <div .page-header>
+        <h2>¿Donde?
+      <div #ubicacion>

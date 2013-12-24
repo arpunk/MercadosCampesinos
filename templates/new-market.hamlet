@@ -1,0 +1,18 @@
+<header>
+  ^{navbarWidget}
+
+<div .container>
+  <div .row>
+    <div .col-md-12>
+      <div .page-header>
+        <h1>Crear nuevo mercado
+
+      <form method=post enctype=#{enctype} action=@{NewMarketR}>
+        <div #create-market-map>
+        ^{newMarketWidget}
+        <div>
+          <input type=submit value="Nuevo mercado">
+
+<link rel="stylesheet" href=@{StaticR css_leaflet_css}>
+
+<script src=@{StaticR js_leaflet_js}>

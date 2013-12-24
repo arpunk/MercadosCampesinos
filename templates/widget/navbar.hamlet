@@ -1,0 +1,49 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation
+      <span class="icon-bar">
+      <span class="icon-bar">
+      <span class="icon-bar">
+
+    <a class="navbar-brand" href="#">MercadosCampesinos
+
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href=@{HomeR}>Inicio
+      <li>
+        <a href=@{MarketsR}>Todos los mercados
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Action
+          <li>
+            <a href="#">Another action
+          <li>
+            <a href="#">Something else here
+          <li>
+            <a href="#">Separated link
+          <li>
+            <a href="#">One more separated link
+
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      <button type="submit" class="btn btn-default">Submit
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="#">Link
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Action
+          <li>
+            <a href="#">Another action
+          <li>
+            <a href="#">Something else here
+          <li>
+            <a href="#">Separated link

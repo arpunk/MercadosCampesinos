@@ -1,0 +1,24 @@
+<header>
+  ^{navbarWidget}
+
+<div .container>
+  <div .row>
+    <div .col-md-8>
+      <div .page-header>
+        <h1>Mapa
+
+      <div #map>
+
+    <div .col-md-4>
+      <div .page-header>
+        <h1>Últimos mercados
+
+      <ul>
+        $forall Entity mId m <- markets
+          <li>#{marketTitle m}
+
+      <a href=@{NewMarketR}>
+        <button .btn .btn-primary .btn-lg>Nuevo mercado!
+
+<link rel="stylesheet" href=@{StaticR css_leaflet_css}>
+<script src=@{StaticR js_leaflet_js}>

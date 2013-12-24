@@ -1,0 +1,25 @@
+var map = L.map('create-market-map').setView([4.570868, -74.29733], 6)
+
+var apikey = '4f929ddde73e44ca8a8934b475dbc0bf'
+
+var marker = L.marker()
+
+var markerIcon = L.icon({
+  iconUrl: "/static/images/marker-icon.png"
+})
+
+marker.setIcon(markerIcon)
+
+L.tileLayer('http://{s}.tile.cloudmade.com/' + apikey + '/997/256/{z}/{x}/{y}.png', {
+  attribution: 'Datos de mapa &copy; [_]',
+  maxZoom: 18
+}).addTo(map)
+
+function onMapClick(e) {
+  $("#lat").val(e.latlng.lat)
+  $("#lng").val(e.latlng.lng)
+
+  marker.setLatLng(e.latlng).addTo(map)
+}
+
+map.on('click', onMapClick)

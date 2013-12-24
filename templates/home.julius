@@ -1,0 +1,40 @@
+var map = L.map('map').setView([4.570868, -74.29733], 6)
+
+var apikey = '4f929ddde73e44ca8a8934b475dbc0bf'
+
+var circleStyle = {
+  radius: 10,
+  fillColor: "#ff7800",
+  color: "#000",
+  weight: 1,
+  opacity: 1,
+  fillOpacity: 0.8
+}
+
+L.tileLayer('http://{s}.tile.cloudmade.com/' + apikey + '/997/256/{z}/{x}/{y}.png', {
+  attribution: 'Datos de mapa &copy; [_]',
+  maxZoom: 18
+}).addTo(map)
+
+function onEachFeature(feature, layer) {
+  var popupContent
+  if(feature.properties.popupContent) {
+    popupContent = "<p>" + feature.properties.popupContent + "</p>"
+  }
+
+  layer.bindPopup(popupContent)
+}
+
+$.getJSON('/api/mercados', function(data) {
+  var markets = {
+    type: "FeatureCollection",
+    features: data
+  }
+  
+  L.geoJson(markets, {
+    onEachFeature: onEachFeature,
+    pointToLayer: function(feature, latlng) {
+      return new L.circleMarker(latlng, circleStyle).addTo(map)
+    }
+  }).addTo(map)
+})

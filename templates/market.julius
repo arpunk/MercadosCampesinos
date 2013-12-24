@@ -1,0 +1,14 @@
+var map = L.map('location').setView([4.570868, -74.29733], 8)
+
+var apikey = '4f929ddde73e44ca8a8934b475dbc0bf'
+
+$.getJSON("@{MarketJsonR mid}", function(data) {
+  var markerIcon = new L.icon({ iconUrl: "/static/images/marker-icon.png" })
+  var latlng = new L.LatLng(data.latitude, data.longitude)
+  var location = L.marker(latlng).setIcon(markerIcon).addTo(map)
+})
+
+L.tileLayer('http://{s}.tile.cloudmade.com/' + apikey + '/997/256/{z}/{x}/{y}.png', {
+  attribution: 'Datos de mapa &copy; [_]',
+  maxZoom: 18
+}).addTo(map)
